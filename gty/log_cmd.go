@@ -1,7 +1,7 @@
 package main
 
 import (
-	tickspot "github.com/nicored/gotickyourself"
+	tickspot "github.com/ermyril/gotickyourself"
 
 	"regexp"
 
@@ -103,7 +103,7 @@ func runLogCmd(cmd *cobra.Command, args []string) {
 			todayHours <- getTotalEntriesHours(todayEntries)
 		}()
 
-		entry, err := tick.CreateEntry(date, logHours, cmd.Flag("notes").Value.String(), task, true)
+		entry, err := tick.CreateEntry(date, logHours, cmd.Flag("notes").Value.String(), task, false)
 		errfOnMismatch(err, nil, "An error occurred when creating the entry. %s\n", err)
 		fmt.Printf("Logged successfully\n")
 
