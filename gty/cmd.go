@@ -21,7 +21,7 @@ import (
 	"gopkg.in/yaml.v2"
 )
 
-var version = "0.1.0-dev"
+var version = "0.1.1-dev"
 
 const (
 	gtyDir              = ".gty"
